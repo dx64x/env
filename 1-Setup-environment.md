@@ -90,6 +90,7 @@ sudo mysql_secure_installation
 ```bash
 mysql -u root -p
 CREATE USER 'user_here'@'localhost' IDENTIFIED BY 'password_here';
+ALTER USER 'user_here'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_here';
 GRANT ALL PRIVILEGES ON *.* TO 'user_here'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 SELECT User, Host FROM mysql.user;
